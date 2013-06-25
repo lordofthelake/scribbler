@@ -25,6 +25,34 @@
 	  <groupId>org.json</groupId>
 	  <artifactId>json</artifactId>
 	  <version>20090211</version>
-    </dependency>      
+    </dependency> 
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+	  <artifactId>commons-beanutils-core</artifactId>
+	  <version>1.8.3</version>
+	</dependency>
+    <dependency>
+      <groupId>it.michelepiccirillo</groupId>
+      <artifactId>mirror</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>    
   </dependencies>
+
+  <plugins>
+    <plugin>
+        <groupId>com.ejwa</groupId>
+        <artifactId>maven-gitdep-plugin</artifactId>
+        <version>0.1</version>
+        <configuration>
+            <gitDependencies>
+                <gitDependency>
+                    <groupId>it.michelepiccirillo</groupId>
+                    <artifactId>mirror</artifactId>
+                    <location>https://github.com/lordofthelake/mirror.git</location>
+                    <branch>master</branch>
+                </gitDependency>
+            </gitDependencies>
+        </configuration>
+    </plugin>
+</plugins>
 </project>

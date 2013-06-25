@@ -13,7 +13,7 @@ public interface Metamodel<T> {
 	
 	public Object getValue(T obj, String property);
 	
-	public Marshaller<?, ?> getMarshaller(String property);
+	public <M extends Marshaller<T, ?>> M getMarshaller(String property);
 		
 	public Type getType(String property);
 	

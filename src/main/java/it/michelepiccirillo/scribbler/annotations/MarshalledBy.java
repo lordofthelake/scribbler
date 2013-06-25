@@ -1,5 +1,14 @@
 package it.michelepiccirillo.scribbler.annotations;
 
-public interface MarshalledBy {
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
+import it.michelepiccirillo.scribbler.Marshaller;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.TYPE, ElementType.METHOD})
+public @interface MarshalledBy {
+	Class<? extends Marshaller<?, ?>> value();
 }
